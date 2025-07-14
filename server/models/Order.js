@@ -1,15 +1,15 @@
 import mongoose from "mongoose";
 
 const orderSchema = new mongoose.Schema({
-  products: [
-    {
-      productId: { type: mongoose.Schema.Types.ObjectId, ref: "Product" },
-      quantity: Number
-    }
-  ],
-  user: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
+  name: String,
+  address: String,
+  phone: String,
+  paymentMethod: String,
+  upiId: String,
+  cardNumber: String,
+  expiryDate: String,
+  cvv: String,
   totalAmount: Number,
-  status: { type: String, default: "Pending" }
 }, { timestamps: true });
 
 export default mongoose.model("Order", orderSchema);

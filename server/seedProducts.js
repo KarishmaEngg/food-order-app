@@ -3,7 +3,6 @@ import dotenv from "dotenv";
 import Product from "./models/Product.js";
 
 dotenv.config();
-
 mongoose.connect(process.env.MONGO_URL)
   .then(() => console.log("MongoDB Connected for seeding"))
   .catch(err => console.log(err));
